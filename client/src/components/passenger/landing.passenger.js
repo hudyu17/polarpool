@@ -23,7 +23,7 @@ export default function PassengerLanding() {
 
   return (
     <div>
-      <p>passenger</p>
+      <p>test</p>
       <form onSubmit={handleSubmit}>
           <label>Full Name:</label>
           <input required onChange={nameUpdate}></input>
