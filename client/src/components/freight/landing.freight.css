@@ -22,3 +22,8 @@
     width: 80%;
     margin: 0 auto;
 } 
+
+.date-picker {
+    grid-row: 4;
+    margin: 0 auto;
+}
