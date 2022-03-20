@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import './passenger.css'
+import { Autocomplete, TextField } from '@mui/material';
 
 export default function PassengerLanding() {
   var [ name , setName ] = useState()
@@ -22,8 +24,25 @@ export default function PassengerLanding() {
   }
 
   return (
-    <div>
-      <p>test</p>
+    <div className='passenger-body'>
+      <div className='hero'>
+        <h1>Find flights, or your next adventure</h1>
+        <p>PolarPool keeps things flexible</p>
+      </div>
+      <div className='input-group'>
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={['Montreal', 'Iqaluit']}
+          renderInput={(params) => <TextField {...params} label="Depart from" />}
+        />
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={['Montreal', 'Iqaluit']}
+          renderInput={(params) => <TextField {...params} label="Arrive at" />}
+        />
+      </div>
       <form onSubmit={handleSubmit}>
           <label>Full Name:</label>
           <input required onChange={nameUpdate}></input>

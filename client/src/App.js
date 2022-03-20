@@ -5,15 +5,29 @@ import './app.css'
 import AirlineLanding from './components/airline/landing.airline';
 import FreightLanding from './components/freight/landing.freight';
 import PassengerLanding from './components/passenger/landing.passenger';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 function App() {
+  const THEME = createMuiTheme({
+    typography: {
+     "fontFamily": `"Poppins", sans-serif`,
+     "fontSize": 14,
+     "fontWeightLight": 300,
+     "fontWeightRegular": 400,
+     "fontWeightMedium": 500
+    }
+ });
+
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<PassengerLanding/>}/>
-        <Route path="freight" element={<FreightLanding/>}/>
-        <Route path="airline" element={<AirlineLanding/>}/>
-      </Routes>
+      <ThemeProvider theme={THEME}>
+        <Routes>
+          <Route path="/" element={<PassengerLanding/>}/>
+          <Route path="freight" element={<FreightLanding/>}/>
+          <Route path="airline" element={<AirlineLanding/>}/>
+        </Routes>
+      </ThemeProvider>
     </div>
   );
 }
