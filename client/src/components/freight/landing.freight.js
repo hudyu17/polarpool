@@ -7,7 +7,7 @@ import DatePicker from '@mui/lab/DatePicker';
 
 export default function FreightLanding() {
   return (
-    <div>
+    <div className='freight'>
       <div className='hero'>
         <h1>Book a flight for your freight</h1>
         <p>PolarPool keeps things flexible and safe</p>
@@ -60,9 +60,9 @@ export default function FreightLanding() {
 
       <br/>
 
-      <div className='hero'>
+      {/* <div className='hero'> */}
         <Button variant="contained">Book Flight</Button>
-      </div>
+      {/* </div> */}
     </div>
   )
 }

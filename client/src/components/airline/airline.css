@@ -5,41 +5,53 @@
     position: absolute; 
 }
 
-.airline-body {
+.airline .airline-body {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto 200px 200px auto;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 35px;  
+    gap: 25px;  
     width: 70%;
-    margin: 14vh auto auto;
+    margin: 10vh auto auto;
     /* margin: auto;    */
 }
 
-p {
-    margin-top: -10px;
+.airline h1, p {
+    margin: 3px;
 }
 
-.leaflet-container {
+.airline img {
+    width: 100%;
+    object-fit: cover;
+    height: 58%;
+}
+
+.airline .leaflet-container {
     height: 100%;
     border-radius: 10px;
 }
 
-.card-title {
-    background: #418880;
-    height: 150px;
+.airline .card-heading {
+    display: flex;
+    /* height: 50px; */
+    margin: auto;
+}
+
+.airline .card-title {
+    background: #052d25;
+    height: 120px;
     color: white;
     border-radius: 10px;
     box-sizing: border-box;
-    border: 8px solid black;
+    border: 2px solid black;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
-    /* position: relative;  */
-    top: 50%;
+    padding: 15px; 
+    /* margin: auto 0; */
 }
 
-.card {
+.airline .card {
     background: white;
-    height: 150px;
+    height: 100%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
@@ -47,10 +59,21 @@ p {
     top: 50%;
 }
 
-.big-card {
+.airline .card h3 {
+    margin: 7px auto;
+}
+
+.airline .big-card {
     grid-column: 2/-1;
     grid-row: 1/-1;
     background: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.airline .add-button {
+    grid-column: 1;
+    grid-row: 4;
+    width: 100%;
+
 }

@@ -6,7 +6,7 @@
     position: absolute; 
 }
 
-.passenger-body {
+.passenger .passenger-body {
     display: grid;
     grid-template-rows: auto auto auto;
     gap: 20px;  
@@ -19,23 +19,26 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
+.passenger .submit-button {
+    /* grid-row: 3; */
+    text-align: center;
+}
 
-
-.hero {
+.passenger .hero {
     text-align: center;
     /* grid-row: 2; */
 }
 
-.input-group {
+.passenger .input-group {
     font-family: 'Poppins', sans-serif;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     /* grid-row: 3; */
-    margin: 0 40px;
+    margin: auto;
 }
 
-.date-picker {
+.passenger .date-picker {
     width: 100%;
     height: 90%;
     border: 1px solid black;

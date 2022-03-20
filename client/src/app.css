@@ -4,5 +4,20 @@ body {
     /* background-color: #e5e5f7; */
 /* opacity: 0.4; */
 
-height: 100vh;
+height: 110vh;
+}
+
+.navbar {
+    background-color: #97C1C1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    text-align: center;
+    /* display: absolute; */
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
 }

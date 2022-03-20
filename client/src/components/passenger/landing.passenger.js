@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 import './passenger.css'
 import { Autocomplete, Button, TextField, } from '@mui/material';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
@@ -64,6 +65,7 @@ export default function PassengerLanding() {
         <h1>Find flights, or your next adventure</h1>
         <p>PolarPool keeps things flexible</p>
       </div>
+
       <div className='input-group'>
         <Autocomplete
           disablePortal
@@ -103,15 +105,17 @@ export default function PassengerLanding() {
         
         </div> */}
       </div>
-      <Button 
-        variant="contained"
-        type="submit"
-        style={{maxWidth: '80%', minWidth: '30px', minHeight: '30px', margin: '10px auto 0', backgroundColor: '#30D5C8'}}
-        onClick={() => {
-          handleSubmit()
-        }}>
-      Reserve my spot!</Button>
-        
+      <div className='submit-button'>
+        <Button 
+          component={Link} to="/schedule"
+          variant="contained"
+          type="submit"
+          style={{maxWidth: '80%', minWidth: '30px', minHeight: '30px', margin: '10px auto 0', backgroundColor: '#30D5C8'}}
+          onClick={() => {
+            handleSubmit()
+          }}>Reserve my spot!
+        </Button>
+      </div>
       {/* <form onSubmit={handleSubmit}>
           <label>Full Name:</label>
           <input required onChange={nameUpdate}></input>

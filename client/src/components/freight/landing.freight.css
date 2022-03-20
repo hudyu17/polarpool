@@ -1,29 +1,30 @@
-.grid-container {
+
+.freight .grid-container {
     display: grid;
   }
 
-.freight-body {
+.freight .freight-body {
     display: grid;
     grid-template-rows: 1fr 1fr 3fr;
     gap: 20px;  
 }
 
-.hero {
+.freight .hero {
     text-align: center;
-    grid-row: 2;
+    /* grid-row: 2; */
 }
 
-.input-group {
+.freight .input-group {
     font-family: 'Poppins', sans-serif;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-row: 3;
     width: 80%;
-    margin: 0 auto;
 } 
-
+/* 
 .date-picker {
     grid-row: 4;
     margin: 0 auto;
-}
+} 
+*/
