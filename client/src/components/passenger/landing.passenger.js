@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import './passenger.css'
 import { Autocomplete, TextField } from '@mui/material';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import StaticDatePicker from '@mui/lab/StaticDatePicker';
 
 export default function PassengerLanding() {
   var [ name , setName ] = useState()
@@ -42,6 +45,20 @@ export default function PassengerLanding() {
           options={['Montreal', 'Iqaluit']}
           renderInput={(params) => <TextField {...params} label="Arrive at" />}
         />
+      </div>
+      <div className='date-picker'>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <StaticDatePicker
+            orientation="landscape"
+            openTo="day"
+            // value={value}
+            // shouldDisableDate={isWeekend}
+            // onChange={(newValue) => {
+            //   setValue(newValue);
+            // }}
+            renderInput={(params) => <TextField {...params} />}
+          />
+        </LocalizationProvider>
       </div>
       <form onSubmit={handleSubmit}>
           <label>Full Name:</label>

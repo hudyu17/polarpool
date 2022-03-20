@@ -5,11 +5,10 @@ import './app.css'
 import AirlineLanding from './components/airline/landing.airline';
 import FreightLanding from './components/freight/landing.freight';
 import PassengerLanding from './components/passenger/landing.passenger';
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 
 function App() {
-  const THEME = createMuiTheme({
+  const THEME = createTheme({
     typography: {
      "fontFamily": `"Poppins", sans-serif`,
      "fontSize": 14,
