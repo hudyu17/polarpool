@@ -1,0 +1,56 @@
+.airline {
+    background: repeating-linear-gradient( -45deg, #5ec2b7, #5ec2b7 17px, #e5e5f7 300px, #f1f1f9 100px );
+    height: 100vh;
+    width: 100vw;
+    position: absolute; 
+}
+
+.airline-body {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;  
+    width: 70%;
+    margin: 14vh auto auto;
+    /* margin: auto;    */
+}
+
+p {
+    margin-top: -10px;
+}
+
+.leaflet-container {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card-title {
+    background: #418880;
+    height: 150px;
+    color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 8px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    /* position: relative;  */
+    top: 50%;
+}
+
+.card {
+    background: white;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    /* position: relative;  */
+    top: 50%;
+}
+
+.big-card {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
